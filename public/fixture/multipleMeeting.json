@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "summary": "Meeting 1",
+        "desc": "1st Round - Meeting 1",
+        "start": "2025-02-26T09:00:00",
+        "end": "2025-02-26T10:00:00",
+        "attendees": null,
+        "status": null,
+        "comment": null,
+        "score": {
+            "P": 8
+        },
+        "link": "http://www.hhh.com",
+        "user_det": {
+            "id": 1,
+            "question_score": null,
+            "status": null,
+            "candidate": {
+                "id": 1,
+                "candidate_firstName": "mohan",
+                "candidate_lastName": "raj",
+                "candidateGender": "male",
+                "candidateComment": "",
+                "candidate_email": "mohanrajk@dataterrain.com"
+            },
+            "handled_by": {
+                "id": 3,
+                "last_login": null,
+                "userEmail": "vinodhini_hr@dataterrain.com",
+                "username": "vinodhini_hr",
+                "firstName": "Vinodhini",
+                "lastName": "HR",
+                "userRole": "hr_employee"
+            },
+            "job_id": {
+                "id": 11,
+                "jobRequest_Title": "django developer",
+                "jobRequest_Role": "software engineer",
+                "jobRequest_KeySkills": "django",
+                "jobRequest_Description": "asfffasf"
+            }
+        },
+        "job_id": {
+            "id": 11,
+            "jobRequest_Title": "django developer",
+            "jobRequest_Role": "software engineer",
+            "jobRequest_KeySkills": "django",
+            "jobRequest_Description": "asfffasf"
+        }
+    },
+    {
+        "id": 2,
+        "summary": "Meeting 2",
+        "desc": "1st Round - Meeting 2",
+        "start": "2025-02-26T09:00:00",
+        "end": "2025-02-26T10:00:00",
+        "attendees": null,
+        "status": null,
+        "comment": null,
+        "score": {
+            "p": 7
+        },
+        "link": "http://www.hhh.com",
+        "user_det": {
+            "id": 1,
+            "question_score": null,
+            "status": null,
+            "candidate": {
+                "id": 1,
+                "candidate_firstName": "mohan",
+                "candidate_lastName": "raj",
+                "candidateGender": "male",
+                "candidateComment": "",
+                "candidate_email": "mohanrajk@dataterrain.com"
+            },
+            "handled_by": {
+                "id": 3,
+                "last_login": null,
+                "userEmail": "vinodhini_hr@dataterrain.com",
+                "username": "vinodhini_hr",
+                "firstName": "Vinodhini",
+                "lastName": "HR",
+                "userRole": "hr_employee"
+            },
+            "job_id": {
+                "id": 11,
+                "jobRequest_Title": "django developer",
+                "jobRequest_Role": "software engineer",
+                "jobRequest_KeySkills": "django",
+                "jobRequest_Description": "asfffasf"
+            }
+        },
+        "job_id": {
+            "id": 11,
+            "jobRequest_Title": "django developer",
+            "jobRequest_Role": "software engineer",
+            "jobRequest_KeySkills": "django",
+            "jobRequest_Description": "asfffasf"
+        }
+    },
+    {
+        "id": 3,
+        "summary": "Meeting",
+        "desc": "2nd Round",
+        "start": "2025-02-26T14:00:00",
+        "end": "2025-02-26T15:00:00",
+        "attendees": null,
+        "status": null,
+        "comment": null,
+        "score": {
+            "o": 6
+        },
+        "link": "http://www.hhh.com",
+        "user_det": {
+            "id": 1,
+            "question_score": null,
+            "status": null,
+            "candidate": {
+                "id": 1,
+                "candidate_firstName": "mohan",
+                "candidate_lastName": "raj",
+                "candidateGender": "male",
+                "candidateComment": "",
+                "candidate_email": "mohanrajk@dataterrain.com"
+            },
+            "handled_by": {
+                "id": 3,
+                "last_login": null,
+                "userEmail": "vinodhini_hr@dataterrain.com",
+                "username": "vinodhini_hr",
+                "firstName": "Vinodhini",
+                "lastName": "HR",
+                "userRole": "hr_employee"
+            },
+            "job_id": {
+                "id": 11,
+                "jobRequest_Title": "django developer",
+                "jobRequest_Role": "software engineer",
+                "jobRequest_KeySkills": "django",
+                "jobRequest_Description": "asfffasf"
+            }
+        },
+        "job_id": {
+            "id": 11,
+            "jobRequest_Title": "django developer",
+            "jobRequest_Role": "software engineer",
+            "jobRequest_KeySkills": "django",
+            "jobRequest_Description": "asfffasf"
+        }
+    },
+    {
+        "id": 4,
+        "summary": "Meeting",
+        "desc": "3rd Round",
+        "start": "2025-02-28T11:00:00",
+        "end": "2025-02-28T13:00:00",
+        "attendees": null,
+        "status": null,
+        "comment": null,
+        "score": {
+            "o": 6
+        },
+        "link": "http://www.hhh.com",
+        "user_det": {
+            "id": 1,
+            "question_score": null,
+            "status": null,
+            "candidate": {
+                "id": 1,
+                "candidate_firstName": "mohan",
+                "candidate_lastName": "raj",
+                "candidateGender": "male",
+                "candidateComment": "",
+                "candidate_email": "mohanrajk@dataterrain.com"
+            },
+            "handled_by": {
+                "id": 3,
+                "last_login": null,
+                "userEmail": "vinodhini_hr@dataterrain.com",
+                "username": "vinodhini_hr",
+                "firstName": "Vinodhini",
+                "lastName": "HR",
+                "userRole": "hr_employee"
+            },
+            "job_id": {
+                "id": 11,
+                "jobRequest_Title": "django developer",
+                "jobRequest_Role": "software engineer",
+                "jobRequest_KeySkills": "django",
+                "jobRequest_Description": "asfffasf"
+            }
+        },
+        "job_id": {
+            "id": 11,
+            "jobRequest_Title": "django developer",
+            "jobRequest_Role": "software engineer",
+            "jobRequest_KeySkills": "django",
+            "jobRequest_Description": "asfffasf"
+        }
+    }
+]
