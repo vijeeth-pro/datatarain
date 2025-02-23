@@ -1,7 +1,6 @@
 import { EventContentArg } from '@fullcalendar/core/index.js'
-import { CustomContentGenerator, Identity } from '@fullcalendar/core/internal'
 import React from 'react'
-import { Badge, Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid2, IconButton, styled, Tooltip, tooltipClasses, TooltipProps, Typography } from '@mui/material'
+import { Badge, Box, Button, Dialog, DialogContent, DialogTitle, IconButton, styled, Tooltip, tooltipClasses, TooltipProps, Typography } from '@mui/material'
 import dayjs from 'dayjs'
 import { Event as EventType } from '../types/meeting'
 import { Close, Delete, Edit } from '@mui/icons-material'
