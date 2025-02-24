@@ -3,7 +3,7 @@ import React from 'react'
 import { Badge, Box, Button, Dialog, DialogContent, DialogTitle, IconButton, styled, Tooltip, tooltipClasses, TooltipProps, Typography } from '@mui/material'
 import dayjs from 'dayjs'
 import { Event as EventType } from '../types/meeting'
-import { ArrowRightAlt, Close, CreateOutlined, DeleteOutlineRounded, DownloadDoneRounded, DownloadForOffline, GetApp, Password, RemoveRedEyeRounded } from '@mui/icons-material'
+import { Close, CreateOutlined, DeleteOutlineRounded, GetApp, RemoveRedEyeRounded } from '@mui/icons-material'
 import Grid from '@mui/material/Grid';
 import { GoogleMeet } from '../assets/svg'
 
