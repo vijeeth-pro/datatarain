@@ -59,6 +59,14 @@ function Event(props: EventContentArg) {
                 }}>
                     {data?.extendedProps?.data?.map((item: EventType) => {
                         return (
+                            <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                                <Box sx={{
+                                    width: '20px',
+                                    borderTopLeftRadius: '5px',
+                                    borderBottomLeftRadius: '5px',
+                                    background: 'blue',
+                                    color: 'blue',
+                                }}>asd</Box>
                             <Box
                                 component={'a'}
                                 onClick={() => handleDialogOpen(item)}
@@ -101,6 +109,7 @@ function Event(props: EventContentArg) {
                                     <Typography variant='inherit'>Date: {dayjs(item.start).format('DD MMM YYYY')}</Typography>
                                     <Typography variant='inherit'>{dayjs(item.start).format('hh:mm A')}</Typography>
                                 </Box>
+                            </Box>
                             </Box>
                         )
 
