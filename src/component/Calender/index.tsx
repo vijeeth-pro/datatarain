@@ -4,6 +4,7 @@ import interactionPlugin from "@fullcalendar/interaction"
 import timeGridPlugin from '@fullcalendar/timegrid';
 import Event from '../Event';
 import { EventContentArg, EventInput } from '@fullcalendar/core/index.js';
+import multiMonthPlugin from '@fullcalendar/multimonth'
 
 type Props = {
     meetings: EventInput[];
@@ -18,14 +19,19 @@ const index = (Props: Props) => {
                 headerToolbar={{
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,multiMonthYear'
                 }}
-                plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
+                plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin, multiMonthPlugin]}
                 initialView="dayGridMonth"
                 select={(selectInfo) => console.log('select', selectInfo)}
                 editable={true}
                 eventStartEditable={true}
-
+                buttonText={{
+                    today:    'Today',
+                    month:    'Month',
+                    week:     'Week',
+                    day:      'Day',
+                }}
                 views={{
                     dayGridMonth: {
                         buttonText: 'Month',
@@ -47,6 +53,10 @@ const index = (Props: Props) => {
                         slotDuration: '01:00:00', // Time slot duration (1 hour)
                         // slotMinTime: '10:00:00', // Start time of the calendar (8 AM)
                         // slotMaxTime: '18:00:00', // End time of the calendar (8 PM),
+                        allDaySlot: false
+                    },
+                    multiMonthYear: {
+                        buttonText: 'Year',
                         allDaySlot: false
                     }
                 }}

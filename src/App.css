@@ -37,12 +37,30 @@
   padding: 2em;
 }
 
-.read-the-docs {
+/* .read-the-docs {
   color: #888;
-}
+} */
 
 .fc-h-event, .fc-v-event {
   border: none;
   background-color: transparent;
 }
 
+.fc-button {
+  background-color: transparent !important;
+  color: black !important;
+  border: 2px solid rgb(98, 98, 246) !important;
+}
+
+.fc-dayGridMonth-button, .fc-timeGridWeek-button ,.fc-timeGridDay-button,.fc-multiMonthYear-button {
+  border: none !important
+}
+
+.fc-button-active {
+  border-bottom: rgb(98, 98, 246) 2px solid !important;
+  outline: none !important;
+}
+
+.fc-timegrid-slot-label-cushion{
+  color: rgb(86, 86, 203) !important
+}
