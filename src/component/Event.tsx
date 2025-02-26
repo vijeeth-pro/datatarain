@@ -26,6 +26,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogActions-root': {
         padding: theme.spacing(1),
     },
+    zIndex: 1000
 }));
 
 
@@ -51,7 +52,7 @@ function Event(props: EventContentArg) {
     return (
         <>
             {/* hover tooltip */}
-            <HtmlTooltip title={
+            <HtmlTooltip sx={{ zIndex: 999 }} title={
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -204,10 +205,10 @@ function Event(props: EventContentArg) {
                                     // alignItems: "center",
                                 }}>
                                 <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>Position: {dialogData?.job_id?.jobRequest_Role}</Typography></Grid>
+                                <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>Skill: {dialogData?.job_id?.jobRequest_KeySkills}</Typography></Grid>
                                 <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>Created By: {dialogData?.user_det?.handled_by?.firstName}</Typography></Grid>
                                 <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>InterViewer date: {dayjs(dialogData?.start).format('DD MMM YYYY')}</Typography></Grid>
                                 <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>InterViewer Time: {dayjs(dialogData?.start).format('hh:mm A')}</Typography></Grid>
-                                <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>Position: {dialogData?.job_id?.jobRequest_Role}</Typography></Grid>
                                 <Grid item xs={12}>
                                     <Button fullWidth variant='outlined'  
                                     sx={{
