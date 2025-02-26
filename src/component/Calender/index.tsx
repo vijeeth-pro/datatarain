@@ -41,18 +41,18 @@ const index = (Props: Props) => {
                     timeGridWeek: {
                         buttonText: 'Week',
                         dayHeaderFormat: { day: 'numeric', weekday: 'short', month: 'short' },
-                        slotDuration: '01:00:00', // Time slot duration (1 hour)
-                        // slotMinTime: '10:00:00', // Start time of the calendar (8 AM)
-                        // slotMaxTime: '18:00:00', // End time of the calendar (8 PM),
+                        // slotDuration: '01:00:00', // Time slot duration (1 hour)
+                        slotMinTime: '06:00:00', // Start time of the calendar (8 AM)
+                        slotMaxTime: '18:00:00', // End time of the calendar (8 PM),
                         allDaySlot: false,
-                        // slotEventOverlap: true,
+                        slotEventOverlap: false,
                     },
                     timeGridDay: {
                         buttonText: 'Day',
                         dayHeaderFormat: { day: 'numeric', weekday: 'short', month: 'long' },
-                        slotDuration: '01:00:00', // Time slot duration (1 hour)
-                        // slotMinTime: '10:00:00', // Start time of the calendar (8 AM)
-                        // slotMaxTime: '18:00:00', // End time of the calendar (8 PM),
+                        // slotDuration: '01:00:00', // Time slot duration (1 hour)
+                        slotMinTime: '06:00:00', // Start time of the calendar (8 AM)
+                        slotMaxTime: '18:00:00', // End time of the calendar (8 PM),
                         allDaySlot: false
                     },
                     multiMonthYear: {

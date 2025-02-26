@@ -1,5 +1,5 @@
 import { EventContentArg } from '@fullcalendar/core/index.js'
-import React from 'react'
+import React, { useState } from 'react'
 import { Badge, Box, Button, Dialog, DialogContent, DialogTitle, IconButton, styled, Tooltip, tooltipClasses, TooltipProps, Typography } from '@mui/material'
 import dayjs from 'dayjs'
 import { Event as EventType } from '../types/meeting'
@@ -36,8 +36,12 @@ function Event(props: EventContentArg) {
     const { event } = props
     const { _def: data } = event
 
+    // console.log(props)
+
     const [eventDialog, setEventDialog] = React.useState(false)
     const [dialogData, setDialogData] = React.useState<EventType | null>(null)
+
+    const [open, setOpen] = useState(false)
 
     const handleClose = () => {
         setEventDialog(false)
@@ -52,7 +56,11 @@ function Event(props: EventContentArg) {
     return (
         <>
             {/* hover tooltip */}
-            <HtmlTooltip sx={{ zIndex: 999 }} title={
+            <HtmlTooltip 
+                open={open}
+                onClose={() => setOpen(false)}
+                placement={props?.view?.type==="timeGridDay"? 'top' : 'right' }
+             sx={{ zIndex: 999 }} title={
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -116,7 +124,7 @@ function Event(props: EventContentArg) {
 
                     })}
                 </Box>
-            } placement='right'>
+            } >
 
                 {/* badge count */}
                 <Badge sx={{ width: '100%', minWidth: '200px' }} showZero={false} badgeContent={data.extendedProps?.data?.length === 1 ? 0 : data.extendedProps?.data?.length} color="warning">
@@ -131,7 +139,16 @@ function Event(props: EventContentArg) {
                         boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
                         display: 'flex',
                         flexDirection: 'row',
-                    }}>
+                    }}
+                    onClick={() => {
+                        if((data?.extendedProps?.data?.length ?? 0) > 1){
+                            setOpen(true)
+                        } else {
+                            setOpen(false)
+                            handleDialogOpen(data?.extendedProps?.data[0])
+                        }
+                    }}
+                    >
                         <Box sx={{
                             width: '20px',
                             borderTopLeftRadius: '5px',
