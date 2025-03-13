@@ -56,98 +56,109 @@ function Event(props: EventContentArg) {
     return (
         <>
             {/* hover tooltip */}
-            <HtmlTooltip 
+            <HtmlTooltip
                 open={open}
                 onClose={() => setOpen(false)}
-                placement={props?.view?.type==="timeGridDay"? 'top' : 'right' }
-             sx={{ zIndex: 999 }} title={
-                <Box sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '10px',
-                }}>
-                    {data?.extendedProps?.data?.map((item: EventType) => {
-                        return (
-                            <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                                <Box sx={{
-                                    width: '20px',
-                                    borderTopLeftRadius: '5px',
-                                    borderBottomLeftRadius: '5px',
-                                    background: 'blue',
-                                    color: 'blue',
-                                }}>asd</Box>
-                            <Box
-                                component={'a'}
-                                onClick={() => handleDialogOpen(item)}
-                                sx={{
-                                    background: 'white',
-                                    // border: '1px solid black',
-                                    borderRadius: '8px',
-                                    padding: '5px',
-                                    color: 'black',
-                                    boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-                                    minWidth: '250px',
-                                    width: '100%',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    gap: '5px',
-                                    cursor: 'pointer'
-                                }}>
-                                <Box sx={{
-                                    display: 'flex',
-                                    flexDirection: 'row',
-                                    justifyContent: 'space-between',
-                                    alignItems: 'center'
-                                }}>
-                                    <Typography variant='body2' sx={{
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        textTransform: 'capitalize'
-                                    }}>{item?.job_id?.jobRequest_Title}</Typography>
-                                    {/* <Typography variant='body1' textTransform={'capitalize'}>{item?.job_id?.jobRequest_Title}</Typography> */}
-                                    <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                                        <IconButton size='small'><CreateOutlined scale={'small'} color='primary' /></IconButton>
-                                        <IconButton size='small'><DeleteOutlineRounded scale={'small'} color='error' /></IconButton>
+                placement={props?.view?.type === "timeGridDay" ? 'top' : 'right'}
+                sx={{ 
+                    zIndex: 999,
+                 }} 
+                title={
+                    <Box sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '10px',
+                    }}>
+                        {data?.extendedProps?.data?.map((item: EventType) => {
+                            return (
+                                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                                    <Box sx={{
+                                        width: '20px',
+                                        borderTopLeftRadius: '5px',
+                                        borderBottomLeftRadius: '5px',
+                                        background: 'blue',
+                                        color: 'blue',
+                                    }}>asd</Box>
+                                    <Box
+                                        component={'a'}
+                                        onClick={() => handleDialogOpen(item)}
+                                        sx={{
+                                            background: 'white',
+                                            // border: '1px solid black',
+                                            // borderRadius: '8px',
+                                            padding: '5px',
+                                            color: 'black',
+                                            boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+                                            minWidth: '250px',
+                                            width: '100%',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '5px',
+                                            cursor: 'pointer'
+                                        }}>
+                                        <Box sx={{
+                                            display: 'flex',
+                                            flexDirection: 'row',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'center'
+                                        }}>
+                                            <Typography variant='body2' sx={{
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
+                                                textTransform: 'capitalize'
+                                            }}>{item?.job_id?.jobRequest_Title}</Typography>
+                                            {/* <Typography variant='body1' textTransform={'capitalize'}>{item?.job_id?.jobRequest_Title}</Typography> */}
+                                            <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                                                <IconButton size='small'><CreateOutlined scale={'small'} color='primary' /></IconButton>
+                                                <IconButton size='small'><DeleteOutlineRounded scale={'small'} color='error' /></IconButton>
+                                            </Box>
+                                        </Box>
+                                        <Typography variant='inherit' sx={{
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                        }}>{item.desc} | InterViewer: {item?.user_det?.handled_by?.firstName}</Typography>
+                                        <Box sx={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
+                                            <Typography variant='inherit'>Date: {dayjs(item.start).format('DD MMM YYYY')}</Typography>
+                                            <Typography variant='inherit'>{dayjs(item.start).format('hh:mm A')}</Typography>
+                                        </Box>
                                     </Box>
                                 </Box>
-                                <Typography variant='inherit' sx={{
-                                    overflow: 'hidden',
-                                    textOverflow: 'ellipsis',
-                                }}>{item.desc} | InterViewer: {item?.user_det?.handled_by?.firstName}</Typography>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
-                                    <Typography variant='inherit'>Date: {dayjs(item.start).format('DD MMM YYYY')}</Typography>
-                                    <Typography variant='inherit'>{dayjs(item.start).format('hh:mm A')}</Typography>
-                                </Box>
-                            </Box>
-                            </Box>
-                        )
+                            )
 
-                    })}
-                </Box>
-            } >
+                        })}
+                    </Box>
+                }>
 
                 {/* badge count */}
-                <Badge sx={{ width: '100%', minWidth: '200px' }} showZero={false} badgeContent={data.extendedProps?.data?.length === 1 ? 0 : data.extendedProps?.data?.length} color="warning">
-                    <Box component={'div'} sx={{
+                <Badge
+                    sx={{
+                        width: '100%',
+                    }}
+                    showZero={false}
+                    badgeContent={data.extendedProps?.data?.length === 1 ? 0 : data.extendedProps?.data?.length}
+                    color="warning"
+                >
+                    <Box component={'div'} 
+                    sx={{
                         background: 'white',
                         color: 'black',
                         width: '100%',
-                        minWidth: '200px',
+                        // minWidth: '200px',
                         borderRadius: '5px',
-                        overflow: 'visible',
+                        // overflow: 'visible',
                         // border: '1px solid black',
                         boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
                         display: 'flex',
                         flexDirection: 'row',
                     }}
-                    onClick={() => {
-                        if((data?.extendedProps?.data?.length ?? 0) > 1){
-                            setOpen(true)
-                        } else {
-                            setOpen(false)
-                            handleDialogOpen(data?.extendedProps?.data[0])
-                        }
-                    }}
+                        onClick={() => {
+                            if ((data?.extendedProps?.data?.length ?? 0) > 1) {
+                                setOpen(true)
+                            } else {
+                                setOpen(false)
+                                handleDialogOpen(data?.extendedProps?.data[0])
+                            }
+                        }}
                     >
                         <Box sx={{
                             width: '20px',
@@ -227,18 +238,18 @@ function Event(props: EventContentArg) {
                                 <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>InterViewer date: {dayjs(dialogData?.start).format('DD MMM YYYY')}</Typography></Grid>
                                 <Grid item xs={12}><Typography variant='body2' textTransform={'capitalize'}>InterViewer Time: {dayjs(dialogData?.start).format('hh:mm A')}</Typography></Grid>
                                 <Grid item xs={12}>
-                                    <Button fullWidth variant='outlined'  
-                                    sx={{
-                                        textTransform: 'none'
-                                    }}
-                                    endIcon={<>
-                                        <RemoveRedEyeRounded />
-                                        <GetApp />
+                                    <Button fullWidth variant='outlined'
+                                        sx={{
+                                            textTransform: 'none'
+                                        }}
+                                        endIcon={<>
+                                            <RemoveRedEyeRounded />
+                                            <GetApp />
                                         </>}>Resume.docx</Button>
-                                    <Button sx={{ mt: 1,textTransform: 'none' }} fullWidth variant='outlined'  
-                                    endIcon={<>
-                                        <RemoveRedEyeRounded />
-                                        <GetApp />
+                                    <Button sx={{ mt: 1, textTransform: 'none' }} fullWidth variant='outlined'
+                                        endIcon={<>
+                                            <RemoveRedEyeRounded />
+                                            <GetApp />
                                         </>}>Aadhar Card</Button>
                                 </Grid>
 

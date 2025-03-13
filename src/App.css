@@ -64,3 +64,24 @@
 .fc-timegrid-slot-label-cushion{
   color: rgb(86, 86, 203) !important
 }
+
+/* Ensure consistent height for day grid rows */
+.fc-daygrid-body tr {
+  height: 130px !important; /* Adjust height as needed */
+  /* overflow: hidden; */
+}
+
+/* Ensure consistent height for day cells */
+.fc-daygrid-day-frame {
+  /* height: 100px !important; */
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: auto;  */
+}
+
+/* Adjust tooltip or hover alignment */
+.fc-event-main {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}

@@ -5,6 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import Event from '../Event';
 import { EventContentArg, EventInput } from '@fullcalendar/core/index.js';
 import multiMonthPlugin from '@fullcalendar/multimonth'
+import { useEffect } from 'react';
 
 type Props = {
     meetings: EventInput[];
@@ -12,7 +13,7 @@ type Props = {
 
 const index = (Props: Props) => {
     const { meetings = [] } = Props
-    
+
     return (
         <>
             <FullCalendar
@@ -36,14 +37,14 @@ const index = (Props: Props) => {
                     dayGridMonth: {
                         buttonText: 'Month',
                         dayHeaderContent: (arg) => arg.date.toLocaleString('en-US', {weekday: 'long' }),
-                        
+                        startParam: 'start',
                     },
                     timeGridWeek: {
                         buttonText: 'Week',
                         dayHeaderFormat: { day: 'numeric', weekday: 'short', month: 'short' },
                         // slotDuration: '01:00:00', // Time slot duration (1 hour)
                         slotMinTime: '06:00:00', // Start time of the calendar (8 AM)
-                        slotMaxTime: '18:00:00', // End time of the calendar (8 PM),
+                        // slotMaxTime: '20:00:00', // End time of the calendar (8 PM),
                         allDaySlot: false,
                         slotEventOverlap: false,
                     },
@@ -52,7 +53,7 @@ const index = (Props: Props) => {
                         dayHeaderFormat: { day: 'numeric', weekday: 'short', month: 'long' },
                         // slotDuration: '01:00:00', // Time slot duration (1 hour)
                         slotMinTime: '06:00:00', // Start time of the calendar (8 AM)
-                        slotMaxTime: '18:00:00', // End time of the calendar (8 PM),
+                        // slotMaxTime: '20:00:00', // End time of the calendar (8 PM),
                         allDaySlot: false
                     },
                     multiMonthYear: {
