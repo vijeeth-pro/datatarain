@@ -5,7 +5,6 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import Event from '../Event';
 import { EventContentArg, EventInput } from '@fullcalendar/core/index.js';
 import multiMonthPlugin from '@fullcalendar/multimonth'
-import { useEffect } from 'react';
 
 type Props = {
     meetings: EventInput[];
