@@ -161,7 +161,7 @@ function Event(props: EventContentArg) {
                         }}
                     >
                         <Box sx={{
-                            width: '20px',
+                            width: '10px',
                             borderTopLeftRadius: '5px',
                             borderBottomLeftRadius: '5px',
                             background: 'blue'
@@ -171,19 +171,20 @@ function Event(props: EventContentArg) {
                             flexDirection: 'column',
                             paddingLeft: '10px',
                             gap: '2px',
-                            padding: '6px'
+                            padding: '4px'
                         }}>
                             {/* title */}
                             <Typography variant='inherit' sx={{
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
-                                fontWeight: 500,
+                                fontWeight: 400,
                             }}>{event.title}</Typography>
 
                             {/* InterViewer */}
                             <Typography variant='inherit' sx={{
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
+                                fontSize: '12px'
                             }}>InterViewer: {event.extendedProps?.data?.[0]?.user_det?.handled_by?.firstName}</Typography>
 
                             {/* time */}
@@ -191,9 +192,12 @@ function Event(props: EventContentArg) {
                                 display: 'flex',
                                 flexDirection: 'row',
                             }}>
-                                <Typography variant='inherit'>Time: {dayjs(data.extendedProps?.data?.[0]?.start).format('hh:mm A')}</Typography> - <Typography variant='inherit' sx={{
+                                <Typography variant='inherit' sx={{
+                                    fontSize: '12px'
+                                }}>Time: {dayjs(data.extendedProps?.data?.[0]?.start).format('hh:mm A')}</Typography> - <Typography variant='inherit' sx={{
                                     overflow: 'hidden',
                                     textOverflow: 'ellipsis',
+                                    fontSize: '12px'
                                 }}  >{dayjs(data.extendedProps?.data?.[0]?.end).format('hh:mm A')}</Typography>
 
                             </Box>
@@ -264,7 +268,7 @@ function Event(props: EventContentArg) {
                                     padding: '70px'
                                 }}>
                                 {/* <Grid item xs={12}> */}
-                                {/* <Typography variant='body1' textTransform={'capitalize'}>Meeting</Typography> */}
+                                <Typography variant='body1' textTransform={'capitalize'}>Meeting</Typography>
                                 <GoogleMeet />
 
 

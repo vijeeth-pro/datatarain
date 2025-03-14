@@ -85,3 +85,15 @@
   display: flex;
   align-items: center;
 }
+
+.fc-timegrid-slots tr{
+  height: 40px !important
+}
+
+.fc-multimonth .fc-event {
+  display: none;
+}
+
+.fc-multimonth-daygrid-table td{
+  height: 10px !important
+}

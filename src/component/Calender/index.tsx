@@ -57,7 +57,7 @@ const index = (Props: Props) => {
                     },
                     multiMonthYear: {
                         buttonText: 'Year',
-                        allDaySlot: false
+                        // allDaySlot: false,
                     }
                 }}
                 dateClick={(arg) => console.log('dateClick', arg)}
